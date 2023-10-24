@@ -9,7 +9,7 @@ let Receitas = [
   },
   {
     nome: "Bolo de Café Cremoso",
-    imagem: "../assets/Bolo.png",
+    'imagem': "../assets/Bolo.png",
     ingredientes: [
       "Farinha de Trigo",
       "Açúcar",
