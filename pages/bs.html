@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ordenador</title>
+    <link rel="shortcut icon" href="/assets/joystick.ico" type="image/ico" />
+    <link href="/css/formatos.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar navbar-expand">
+        <ul class="navbar-nav">
+          <li><a href="/index.html" class="nav-link" id="Home">Home</a></li>
+          <li>
+            <a
+              href="/pages/receitas.html"
+              class="nav-link"
+              id=" active receitas"
+              ><b>Receitas</b></a
+            >
+          </li>
+          <li>
+            <a href="/pages/bs.html" class="nav-link" id="BS">Ordenação</a>
+          </li>
+          <li>
+            <a href="/pages/credits.html" class="nav-link" id="creditos"
+              >Creditos</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main class="mb-auto container-fluid">
+      <h1 class="mb-2">Ordenador</h1>
+      <div>
+        <h3>Insira os numeros a serem ordenados:</h3>
+        <input type="number" class="form-control mb-4" id="valor" />
+      </div>
+      <div class="input-buttons">
+        <button id="addElement" onclick="adicionarValor()">
+          Adicionar elemento
+        </button>
+        <button id="apagarElemento" onclick="apagarValor()">
+          Apagar Valor
+        </button>
+      </div>
+      <hr />
+      <div class="mb-3">
+        <h3>Selecione o tipo de ordenação</h3>
+        <br />
+        <select id="selects">
+          <option value="bubbleSort" selected>Bubble Sort</option>
+          <option value="selectionSort">Selection Sort</option>
+          <option value="quickSort">Quick Sort</option>
+        </select>
+      </div>
+      <div class="sorting-buttons">
+        <button type="submit" onclick="ordenar()">Ordenar</button>
+        <button type="submit" onclick="misturar()">Misturar</button>
+        <button id="apagarTudo" onclick="apagarTudo()">
+          Apagar todos os Valores
+        </button>
+      </div>
+        <ul id="valores"></ul>
+    </main>
+    <script src="../javascript/ordenador.js"></script>
+  </body>
+</html>

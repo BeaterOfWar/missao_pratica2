@@ -1,0 +1,115 @@
+:root{
+  --primary-color:black;
+
+  --secondary-color:white;
+
+  --background-color:#3f616e;
+
+  --container-color:white;
+
+  --emphasize-color: #9981cf;
+
+}
+/* principal */
+body{
+  background-color: var(--primary-color)!important;
+  overflow-y: auto;
+  padding: 0px;
+  margin: 0px;
+}
+header{
+  background-color: white;
+  display: block;
+  height: 60px!important;
+}
+
+
+main{
+  margin: 120px;
+  text-align: justify;
+  color:white;
+  font-family: fantasy;
+  height:calc(100vh - 100px)!important;
+  overflow-y:auto!important;
+}
+nav{
+  display: flex;
+  flex-direction: row;
+  row-gap: 0;
+}
+
+footer {
+  background-color: black;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 25px!important;
+  padding-top: 5px;
+  color: white;
+  }
+
+ul{
+  color: white !important;
+}
+
+.navbar{
+  width: 100% !important;
+}
+.nav-link{
+  color: black !important;
+  font-family:American Typewriter, serif!important;
+  font-size: 30px !important;
+  margin-top: -10px;
+}
+.nav-link:hover{
+  color: var(--background-color)!important;
+}
+
+.card-title{
+  font-size: medium !important;
+  color: black!important;
+  font-family:American Typewriter, serif!important;
+}
+.ingredientes{
+  color: black !important;
+  font-size: small;
+  text-align: left;
+  font-family:American Typewriter, serif!important;
+}
+.card{
+  background-color: var(--secondary-color)!important;
+}
+.card:hover{
+  background-color: var(--container-color)!important;
+}
+.card-text{
+  font-size: small !important;
+  color: black;
+  font-family:American Typewriter, serif!important;
+}
+#credits{
+  font-size: 12px!important;
+  font-weight: 20px!important;
+}
+
+input#valor{
+  width: 250px;
+  float: left;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+ul#valores > li{
+  padding:2px;
+  margin: 5px;
+  text-align: left;
+  color: white;
+  font-size: 16px;
+}
+
+ul#valores > li {
+  float: top;
+  margin: 1px;
+  color:white
+}
