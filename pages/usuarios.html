@@ -1,44 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+  <link>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Creditos</title>
     <link rel="shortcut icon" href="/assets/joystick.ico" type="image/ico" />
     <link href="/css/formatos.css" rel="stylesheet" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"/>
   </head>
 
-  <body>
+  <body class="bg-warning">
     <header>
       <nav class="navbar navbar-expand">
         <ul class="navbar-nav">
           <li><a href="/index.html" class="nav-link" id="Home">Home</a></li>
           <li>
-            <a
-              href="/pages/receitas.html"
+            <a href="/pages/receitas.html"
               class="nav-link"
-              id=" active receitas"
-              ><b>Receitas</b></a
-            >
+              id=" active receitas"><b>Receitas</b></a>
           </li>
           <li>
             <a href="/pages/ordenador.html" class="nav-link" id="BS">Ordenação</a>
           </li>
           <li>
-            <a href="/pages/usuarios.html" class="nav-link" id="usuarios"
-              >Creditos</a
-            >
+            <a href="/pages/usuarios.html" class="nav-link" id="usuarios">Usuarios</a>
           </li>
         </ul>
       </nav>
     </header>
-    <main></main>
-    <script src="../javascript/usuarios.js"></script>
-  </body>
+    <main class="container">
+      <h1 class="text-center m-3">Usuários de Teste via REST</h1>
+      <h5 class="text-center m-3 subtitle">Usuarios da API de testes: <a href="https://reqres.in/" target="_blank">reqres.in</a></h5>
+      <div class="container-fluid" id="usuarios" >
+        <div class="row d-flex justify-content-center">
+          <div class="card col-3 p-2 m-3 text-center" v-for="(user,index) in users" :key="index">
+            <img class="card-img-top" :src="user.avatar">
+              <div class="card-body">
+               <h5 class="card-title">{{user.first_name}} {{user.last_name}}</h5>
+                 <p class="card-text">{{user.email}}</p>
+              </div>
+          </div>
+        </div>
+  </main>
+  <footer>
+
+  </footer>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="/javascript/usuarios.js"></script>
+</body>
 </html>
