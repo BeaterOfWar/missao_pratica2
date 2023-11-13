@@ -66,6 +66,11 @@ ul{
   color: var(--background-color)!important;
 }
 
+.card-img-top{
+  width: 300px;
+  height: 250px;
+}
+
 .card-title{
   font-size: medium !important;
   color: black!important;

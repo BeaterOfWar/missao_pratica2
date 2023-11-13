@@ -9,7 +9,7 @@ let Receitas = [
   },
   {
     nome: "Bolo de Café Cremoso",
-    'imagem': "../assets/Bolo.png",
+    imagem: "../assets/Bolo.png",
     ingredientes: [
       "Farinha de Trigo",
       "Açúcar",
@@ -44,7 +44,7 @@ const  getListaIngredientes = (Receitas) => Receitas.ingredientes
 
 
 const  getCard = (Receitas) => 
-  `<div class="card rounded-5 my-4" style="width: 300px; height: 530px;"'> 
+  `<div class="card rounded-5 my-4" style="width: 300px; height: 600px;"'> 
      <img src='${Receitas.imagem}' class="card-img-top">
      <div class='card-body'>
        <h2 class="card-title fs-4 p-2 fw-bold">${Receitas.nome}</h2>
@@ -56,7 +56,8 @@ const  getCard = (Receitas) =>
 
 
 const  preencheCatalogo= () => 
-  document.getElementById(pnlCatalogo).innerHTML = Receitas
+  document.getElementById('pnlCatalogo').innerHTML = Receitas
     .map(Receitas => getCard(Receitas))
     .reduce((gerador, item)=> gerador + item, '');
 
+document.onload = preencheCatalogo();
